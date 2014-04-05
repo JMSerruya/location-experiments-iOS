@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpl-S1-y1A">
+                                <rect key="frame" x="78" y="518" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Updating Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateLocationButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="veu-ac-c6F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an address label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-vR-UGd">
+                                <rect key="frame" x="70" y="274" width="180" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an date label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77s-va-DWa">
+                                <rect key="frame" x="84" y="303" width="153" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5411764979" green="0.55294120309999995" blue="0.55294120309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fb6-vR-UGd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="SR3-G5-uM3"/>
+                            <constraint firstAttribute="centerY" secondItem="Fb6-vR-UGd" secondAttribute="centerY" id="Vvb-bh-L3P"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Cpl-S1-y1A" secondAttribute="bottom" constant="20" id="Wqq-x2-MjK"/>
+                            <constraint firstAttribute="centerX" secondItem="77s-va-DWa" secondAttribute="centerX" id="emJ-AZ-Ehg"/>
+                            <constraint firstAttribute="centerX" secondItem="Fb6-vR-UGd" secondAttribute="centerX" id="gXe-Lw-mnG"/>
+                            <constraint firstItem="77s-va-DWa" firstAttribute="top" secondItem="Fb6-vR-UGd" secondAttribute="bottom" constant="8" id="hUK-PI-aSG"/>
+                            <constraint firstAttribute="centerX" secondItem="Cpl-S1-y1A" secondAttribute="centerX" id="n2K-V3-cpI"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fb6-vR-UGd" secondAttribute="trailing" constant="10" id="nd9-Qs-AMz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_addressLabel" destination="Fb6-vR-UGd" id="hSb-eG-lql"/>
+                        <outlet property="_dateLabel" destination="77s-va-DWa" id="Xgs-xH-lVE"/>
+                        <outlet property="_updateLocationButton" destination="Cpl-S1-y1A" id="PfM-Yc-r45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
