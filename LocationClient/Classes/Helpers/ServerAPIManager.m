@@ -116,7 +116,7 @@
 - (id)init{
     self = [super init];
     if (self){
-        _baseURL = [NSURL URLWithString:@"http://betzerralocationserver.herokuapp.com"];
+        _baseURL = [NSURL URLWithString:@"http://where-is-victor-mark.herokuapp.com"];
         
         //  Init AFHTTPRequestOperationManager
         _operationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:_baseURL];
